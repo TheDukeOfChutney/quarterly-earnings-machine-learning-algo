@@ -29,7 +29,7 @@ def getFinancialOneDay(row):
         logging.info(e)
         print(e)
         return row
-
+    date = pd.to_datetime(date)
     if not (date + pd.Timedelta(days=1)) in hist.index:
         logging.info(str(len(hist.index)) + ' day avail')
         print(str(len(hist.index)) + ' day avail')
